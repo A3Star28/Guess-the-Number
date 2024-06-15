@@ -1,10 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Guess the Number</title>
+  <title>Guess the Number </title>
 </head>
 <body>
-  <h1>Guess the Number by A3Star</h1>
+  <h1>Guess the Number!</h1>
   <input id="guess" type="number" />
   <button id="submit">Guess</button>
   <p id="result"></p>
@@ -22,9 +22,9 @@
       if (userGuess === secretNumber) {
         document.getElementById("result").innerHTML = ` Congratulations! You found the number in ${attempts} attempts.`;
       } else if (userGuess < secretNumber) {
-        document.getElementById("result").innerHTML = `Je to väčšie čílo!`;
+        document.getElementById("result").innerHTML = `Too low!`;
       } else {
-        document.getElementById("result").innerHTML = `Je to menšie čílo!.`;
+        document.getElementById("result").innerHTML = `Too high!.`;
       }
     }
   </script>
