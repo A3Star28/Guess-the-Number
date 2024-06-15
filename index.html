@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Guess the Number</title>
+</head>
+<body>
+  <h1>Guess the Number by A3Star</h1>
+  <input id="guess" type="number" />
+  <button id="submit">Guess</button>
+  <p id="result"></p>
+
+  <script>
+    let secretNumber = Math.floor(Math.random() * 100) + 1;
+    let attempts = 0;
+
+    document.getElementById("submit").addEventListener("click", checkGuess);
+
+    function checkGuess() {
+      let userGuess = parseInt(document.getElementById("guess").value);
+      attempts++;
+
+      if (userGuess === secretNumber) {
+        document.getElementById("result").innerHTML = ` Congratulations! You found the number in ${attempts} attempts.`;
+      } else if (userGuess < secretNumber) {
+        document.getElementById("result").innerHTML = `Je to väčšie čílo!`;
+      } else {
+        document.getElementById("result").innerHTML = `Je to menšie čílo!.`;
+      }
+    }
+  </script>
+</body>
+</html>
